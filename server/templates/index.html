@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor de Arquivos</title>
+</head>
+<body>
+    <h1>Upload e Download de Arquivos</h1>
+
+    <!-- Formulário para upload -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="hidden" name="path" value="{{ current_path }}">
+        <button type="submit">Upload</button>
+    </form>
+
+    <ul>
+        {% if current_path %}
+        <!-- Link para voltar um nível -->
+        <a href="{{ url_for('index') }}">voltar</a>
+        {% endif %}
+        {% for directory in directories %}
+        <li><a href="{{ url_for('index', path=current_path + '/' + directory) }}">{{ directory }}/</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Arquivos Disponíveis para Download</h2>
+    <ul>
+        {% for file in files %}
+        <li><a href="{{ url_for('download_file', path=current_path, filename=file) }}">{{ file }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

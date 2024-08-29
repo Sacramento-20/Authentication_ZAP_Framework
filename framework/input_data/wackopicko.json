@@ -1,0 +1,8 @@
+{
+    "context": "Test_WackoPicko",
+    "url": ["http://192.168.15.95/WackoPicko/"],
+    "url_login": "http://192.168.15.95/WackoPicko/users/login.php",
+    "report_title": "Report_WackoPicko",
+    "login": "admin",
+    "password": "admin"
+}

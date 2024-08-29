@@ -1,0 +1,17 @@
+Apresentação dos slides
+
+
+Criar pasta dados_input que vai conter o .json V
+O make vai receber como parametro o arquivo .json V
+compose vai copiar o arquivo dentro do dados_input para o local compartilhado V
+fazer o main receber como parametro o arquivo .json  do local compartilhado com o nome recebido pelo make V
+resolver problema da imagem do zap sem acesso ao volume compartilhado. V
+Teste de outras aplicações V
+Incluidos novas regexs V
+Criar os contextos para as aplicações restante. V
+Modularizar o Framework permitindo um dockerfile para ele e outro para o servidor V
+Implementar o servidor para interagir com os arquivos V
+Commitar no repositorio público -
+Fazer os testes -
+Descrever a arquitetura do sistema - 
+Fazer os slides -

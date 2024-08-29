@@ -1,0 +1,8 @@
+{
+    "context": "Test_DVWA",
+    "url": ["http://192.168.15.95/dvwa/"],
+    "url_login": "http://192.168.15.95/dvwa/login.php",
+    "report_title": "Report_dvwa",
+    "login": "admin",
+    "password": "admin"
+}

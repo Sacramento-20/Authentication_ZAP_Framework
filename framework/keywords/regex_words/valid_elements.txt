@@ -1,0 +1,7 @@
+(?i)\b[\w.-]*senha[\w.-]*\b
+(?i)\b[\w.-]*user[\w.-]*\b
+(?i)\b[\w.-]*email[\w.-]*\b
+(?i)\b[\w.-]*password[\w.-]*\b
+(?i)\b[\w.-]*idLoginForm[\w.-]*\b
+(?i)\b[\w.-]*uid[\w.-]*\b
+(?i)\b[\w.-]*name[\w.-]*\b

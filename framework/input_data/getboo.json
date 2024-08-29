@@ -1,0 +1,9 @@
+{
+    "context": "Test_getboo",
+    "url": ["http://192.168.15.95/getboo/"],
+    "url_login": "http://192.168.15.95/getboo/login.php",
+    "report_title": "Report_getboo",
+    "login": "admin",
+    "password": "admin"
+}
+getboo

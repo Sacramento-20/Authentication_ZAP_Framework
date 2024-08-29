@@ -1,0 +1,9 @@
+{
+    "context": "Test_Gruyere",
+    "url": ["http://192.168.15.95/1142014131/"],
+    "url_login": "http://192.168.15.95/1142014131/login",
+    "report_title": "Report_Gruyere",
+    "login": "admin",
+    "password": "admin"
+}
+testar

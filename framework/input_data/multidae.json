@@ -1,0 +1,8 @@
+{
+    "context": "Test_mutillidae",
+    "url": ["http://192.168.15.95/mutillidae/"],
+    "url_login": "http://192.168.15.95/mutillidae/index.php?page=login.php",
+    "report_title": "Report_mutillidae",
+    "login": "admin",
+    "password": "admin"
+}

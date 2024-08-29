@@ -1,0 +1,8 @@
+{
+    "context": "Test_orangehrm",
+    "url": ["http://192.168.1.9/orangehrm/"],
+    "url_login": "http://192.168.1.9/orangehrm/login.php",
+    "report_title": "Report_orangehrm",
+    "login": "admin",
+    "password": "admin"
+}

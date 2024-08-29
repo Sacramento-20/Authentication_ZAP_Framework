@@ -1,0 +1,8 @@
+{
+    "context": "Test_Perrugia",
+    "url": ["http://192.168.15.95/peruggia/"],
+    "url_login": "http://192.168.15.95/peruggia/index.php?action=login",
+    "report_title": "Report_perrugia",
+    "login": "admin",
+    "password": "admin"
+}

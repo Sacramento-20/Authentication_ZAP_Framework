@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  zaproxy:
+    image: zaproxy/zap-stable
+    command: ["zap.sh", "-config", "api.key=${ZAP_API_KEY}", "-daemon", "-host", "0.0.0.0", "-port", "8080", "-config", "api.addrs.addr.name=.*", "-config", "api.addrs.addr.regex=true"]
+    ports:
+      - "8080:8080"
+    networks:
+      - zapnet
+    environment:
+      - ZAP_API_KEY=${ZAP_API_KEY}
+    volumes:
+      - shared_data:/shared_data
+
+  framework:
+    build: ./framework
+    environment:
+      - FILE=${FILE}
+      - FIREFOX=/usr/local/bin/geckodriver
+      - ZAP_API_KEY=${ZAP_API_KEY}
+      - ZAP_PROXY_ADDRESS=zaproxy
+    networks:
+      - zapnet
+    depends_on:
+      - zaproxy
+    volumes:
+      - ./framework:/app
+      - shared_data:/shared_data
+  
+  server:
+    build: ./server  # Aponta para a pasta ./server para construir a aplicação Flask
+    environment:
+      - UPLOAD_FOLDER=/shared_data  # Define o caminho de upload para a aplicação Flask
+    ports:
+      - "8000:8000"  # Exponha a porta da aplicação Flask
+    networks:
+      - zapnet
+    depends_on:
+      - zaproxy
+      - framework  # Garante que o framework suba antes da aplicação Flask
+    volumes:
+      - ./server:/app  # Mapeia a pasta ./server para /app no contêiner da aplicação Flask
+      - shared_data:/shared_data  # Mapeia o volume compartilhado
+
+networks:
+  zapnet:
+    driver: bridge
+
+volumes:
+  shared_data:

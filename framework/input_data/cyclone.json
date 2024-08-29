@@ -1,0 +1,8 @@
+{
+    "context": "Test_cyclone",
+    "url": ["http://192.168.15.95/cyclone/"],
+    "url_login": "http://192.168.15.95/cyclone/signin",
+    "report_title": "Report_cyclone",
+    "login": "admin@admin.com",
+    "password": "123456"
+}
